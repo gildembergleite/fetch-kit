@@ -1,5 +1,8 @@
-import { RequestOptions } from "https";
+import { RequestOptions } from './requests-options'
 
 export interface HttpClient {
-  request<T>(url: string, options: RequestOptions): Promise<T>
+  request<RequestType, BodyParams>(
+    url: string,
+    options: RequestOptions<BodyParams>,
+  ): Promise<RequestType>
 }

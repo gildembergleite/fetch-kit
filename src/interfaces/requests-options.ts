@@ -1,9 +1,9 @@
-import { RequestHeaders } from "./request-headers";
-import { RequestParams } from "./request-params";
+import { RequestHeaders } from './request-headers'
+import { RequestParams } from './request-params'
 
-export interface RequestOptions {
+export interface RequestOptions<BodyParams> {
   method?: string
   headers?: RequestHeaders
-  body?: any
+  body?: BodyParams
   params?: RequestParams
 }
