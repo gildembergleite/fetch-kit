@@ -1,5 +1,5 @@
 {
-  "name": "easy-fetch",
+  "name": "@gildembergleite/fetch-kit",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
