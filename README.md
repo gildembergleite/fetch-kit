@@ -1,8 +1,8 @@
-# My API Library
+# @gildembergleite/fetch-kit
 
-![npm](https://img.shields.io/npm/v/my-api-library)
-![npm bundle size](https://img.shields.io/bundlephobia/min/my-api-library)
-![npm](https://img.shields.io/npm/dt/my-api-library)
+![npm](https://img.shields.io/npm/v/@gildembergleite/fetch-kit)
+![npm bundle size](https://img.shields.io/bundlephobia/min/@gildembergleite/fetch-kit)
+![npm](https://img.shields.io/npm/dt/@gildembergleite/fetch-kit)
 
 A TypeScript library for building and managing HTTP requests with ease. This library provides a flexible and extensible way to interact with APIs using a `BaseApi` class and customizable `HttpClient` implementations.
 
@@ -19,7 +19,7 @@ A TypeScript library for building and managing HTTP requests with ease. This lib
 You can install the library via npm:
 
 ```bash
-npm install my-api-library
+npm install @gildembergleite/fetch-kit
 ```
 
 ## Usage
@@ -29,8 +29,8 @@ npm install my-api-library
 Here’s how you can set up and use the `BaseApi` class with the default `FetchHttpClient`:
 
 ```typescript
-import { BaseApi } from 'my-api-library';
-import { FetchHttpClient } from 'my-api-library';
+import { BaseApi } from '@gildembergleite/fetch-kit';
+import { FetchHttpClient } from '@gildembergleite/fetch-kit';
 
 const api = new BaseApi({
   baseURL: 'https://api.example.com',
@@ -83,7 +83,7 @@ api.get('/endpoint', {
 By default, the library uses the native `fetch` API, but you can implement and use your own HTTP client by following the `HttpClient` interface:
 
 ```typescript
-import { HttpClient, RequestOptions } from 'my-api-library';
+import { HttpClient, RequestOptions } from '@gildembergleite/fetch-kit';
 
 class CustomHttpClient implements HttpClient {
   async request<T>(url: string, options: RequestOptions): Promise<T> {
