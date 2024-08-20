@@ -17,7 +17,6 @@ class FetchHttpClient {
                 method: options.method || 'GET',
                 headers: options.headers,
                 body: options.body ? JSON.stringify(options.body) : null,
-                cache: 'no-cache',
             });
             return this.handleResponse(response);
         });
@@ -28,7 +27,7 @@ class FetchHttpClient {
                 console.error(`HTTP error! status: ${response.status}`);
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            return response.json();
+            return yield response.json();
         });
     }
 }
